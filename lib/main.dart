@@ -1,3 +1,4 @@
+import 'package:color_picker/image_widgets.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,17 +11,18 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomePage(),
+      home: ImageWidgets(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.red,
-        useMaterial3: false,
-        textTheme: TextTheme(labelLarge: TextStyle(
-          color: Colors.red, 
-          fontSize: 24
-          )),
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
-          backgroundColor: Colors.yellow,
+        primarySwatch: Colors.blue,
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.green,
+            foregroundColor: Colors.white,
+          ),
+        ),
+        textTheme: TextTheme(
+          labelLarge: TextStyle(color: Colors.red, fontSize: 24),
         ),
       ),
     );
